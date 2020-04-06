@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TipCalculator</string>
+    <string name="tip_text">Tip poucentage</string>
+    <string name="btn_calc_tip">Calculate Tip</string>
+</resources>
