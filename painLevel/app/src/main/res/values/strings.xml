@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SeekBar</string>
+    <string name="text">What is you pain level from 1 to 10?</string>
+</resources>
