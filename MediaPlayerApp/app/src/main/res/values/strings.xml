@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MediaPlayerApp</string>
+    <string name="btn_initial_text">Play</string>
+</resources>
