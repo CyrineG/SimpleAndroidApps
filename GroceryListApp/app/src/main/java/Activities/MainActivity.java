@@ -38,18 +38,15 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        db = new DatabaseHandler(this);
+        byPassActivity();
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 addItemPopup();
-                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        //.setAction("Action", null).show();
-
             }
         });
-
-        db = new DatabaseHandler(this);
     }
 
     @Override
@@ -106,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
         db.addGrocery(item);
 
-        Snackbar.make(v,"new grocery item created!", Snackbar.LENGTH_LONG);
+        Snackbar.make(v,"new grocery item created!", Snackbar.LENGTH_LONG).show();
         //Log.d("Item added id ", String.valueOf(db.getGroceryCount()) );
 
         new Handler().postDelayed(new Runnable(){
@@ -118,6 +115,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, ListActivity.class));
             }
         }, 1200); //1 second
+    }
+
+    public void byPassActivity(){
+        //if db not empty then load list of items (ListActivity)
+        if(db.getGroceryCount()>0){
+            startActivity(new Intent(this, ListActivity.class));
+            finish();
+        }
     }
 
 }

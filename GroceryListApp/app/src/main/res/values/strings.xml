@@ -15,4 +15,7 @@
     <string name="btn_save_item">Save</string>
     <string name="grocery_list_empty">Add the first Grocery Item</string>
     <string name="title_activity_list">ListActivity</string>
+    <string name="confirm_delete_text">Are you sure?</string>
+    <string name="cancel_delete_text">No</string>
+    <string name="affirm_delete_text">Yes</string>
 </resources>

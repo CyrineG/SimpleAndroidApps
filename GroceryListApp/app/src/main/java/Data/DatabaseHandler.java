@@ -54,7 +54,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         value.put(Constants.KEY_DATE_ITEM_ADDED, java.lang.System.currentTimeMillis());
 
         db.insert(Constants.GROCERY_TABLE_NAME, null, value);
-        Log.d("Saved", "saved to DB with date" + System.currentTimeMillis());
+        //Log.d("Saved", "saved to DB with date" + System.currentTimeMillis());
         db.close();
     }
 
